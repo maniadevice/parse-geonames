@@ -172,7 +172,7 @@ def is_longitude(value):
 # Open the input file and the output CSV file
 with open(input_file, 'r', encoding='utf-8') as infile, open(output_file, 'w+', newline='', encoding='utf-8') as outfile:
     reader = csv.reader(infile, delimiter='\t')
-    writer = csv.writer(outfile)
+    writer = csv.writer(outfile, delimiter='\t')
 
     # Write the header to the CSV file
     writer.writerow(['Name', 'Latitude', 'Longitude', 'Country Code', 'Timezone'])
